@@ -1,0 +1,45 @@
+// 
+// dividers.scss
+//
+
+
+$divider-height: 10vw;
+.divider {
+  width: 100%;
+  position: relative;
+  height: $divider-height;
+  pointer-events: none;
+  mask-image: str-replace(url("data:image/svg+xml,%3Csvg version='1.1' id='Шар_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 1440 135' style='enable-background:new 0 0 1440 135;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;stroke:%23FFFFFF;%7D%0A%3C/style%3E%3Cpath class='st0' d='M139,85.5C82.6,92.1,52.6,94,1,92v42h1439v-31c-47,12.1-101.5,11.7-186.5,0c-85-11.7-123.3-23.6-201.5-41 c-87.1-19.8-136.3-30.6-228.5-45C749,6,717.6,3.7,632.5,1C564.6,1.5,527.1,4.6,461,14.5c-72.6,13-111.6,22.1-178.5,41 C227,70.5,195.5,77.1,139,85.5z'/%3E%3C/svg%3E%0A"), "#", "%23");
+  mask-size: 100% 101%;
+  background: $white;
+
+  &.divider-bottom {
+    top: 10px;
+    @include media-breakpoint-down(xs) {
+      top: 5px;
+    }
+  }
+
+  &.divider-top {
+    bottom: 6px;
+  }
+}
+
+section {
+  > .divider-bottom {
+    margin-top: calc(#{$default-section-padding-md} - 7rem);
+    @include media-breakpoint-up(md) {
+      margin-top: calc(#{$default-section-padding-lg} - 10rem);
+    }
+  }
+
+  > .divider-top {
+    margin-bottom: calc(#{$default-section-padding} - #{$divider-height});
+    @include media-breakpoint-up(md) {
+      margin-bottom: calc(#{$default-section-padding-md} - #{$divider-height});
+    }
+    @include media-breakpoint-up(md) {
+      margin-bottom: calc(#{$default-section-padding-lg} - #{$divider-height});
+    }
+  }
+}

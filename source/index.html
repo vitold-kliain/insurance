@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ОСАГО онлайн | Главная</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Осаго - страховая компания">
+  <link href="assets/css/theme.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg-white text-white" data-overlay>
+  <img src="assets/img/heros/hero-1.png"
+       srcset="assets/img/heros/hero-1@2x.png 2x"
+       alt="Background"
+       class="bg-image">
+
+  <!--Navbar Menu-->
+  @@include('includes/navbar.html')
+
+
+  <!--Mobile Menu-->
+  @@include('includes/mobile-menu.html')
+
+
+  <!--Section #1 (Hero)-->
+  <section class="o-hidden pt-5 pb-0">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-5 d-flex flex-column text-center">
+          <h1>ОСАГО онлайн</h1>
+          <p class="lead">Мы гарантируем подлинность полиса ОСАГО и его наличие в базе РСА</p>
+        </div>
+      </div>
+      <div class="row justify-content-center align-items-center align-items-sm-end mt-2 mb-5">
+        <img src="assets/img/lines/dotted-line-1.png"
+             srcset="assets/img/lines/dotted-line-1@2x.png 2x"
+             class="dotted-line d-none d-lg-block" alt="Линия">
+        <div class="col-6 col-lg-3 my-3 text-center">
+          <img src="assets/img/blobs/blob-1.png"
+               srcset="assets/img/blobs/blob-1@2x.png 2x"
+               class="img-fluid pb-3 pb-lg-4"
+               alt="Калькулятор иконка">
+          <p>Рассчитайте стоимость</p>
+        </div>
+        <div class="col-6 col-lg-3 my-3 text-center">
+          <img src="assets/img/blobs/blob-2.png"
+               srcset="assets/img/blobs/blob-2@2x.png 2x"
+               class="img-fluid pb-3 pb-lg-4"
+               alt="Поиск иконка">
+          <p>Сравните цены в компаниях</p>
+        </div>
+        <div class="col-6 col-lg-3 my-3 text-center">
+          <img src="assets/img/blobs/blob-3.png"
+               srcset="assets/img/blobs/blob-3@2x.png 2x"
+               class="img-fluid pb-4 pb-sm-3 pb-lg-4"
+               alt="Кредитная карта иконка">
+          <p>Оплатите онлайн</p>
+        </div>
+        <div class="col-6 col-lg-3 my-3 text-center">
+          <img src="assets/img/blobs/blob-4.png"
+               srcset="assets/img/blobs/blob-4@2x.png 2x"
+               class="img-fluid pb-3 pb-lg-4"
+               alt="Почта иконка">
+          <p>Получите полис на email</p>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-5 d-flex flex-column text-center">
+          <h3 class="section-title">Введите номер автомобиля</h3>
+          <form name="calculate-form" method="get" action="step-1.html">
+            <div class="d-flex align-items-center form-group bg-white rounded-md p-3 m-0 shadow-sm">
+              <input class="form-control border-0 mr-sm-2 w-50 flex-grow-1 weight-500"
+                     name="calculate"
+                     placeholder="А 123 АА 777" type="text" required>
+              <button type="submit" class="btn bg-gradient border-0" href="step-1.html">
+                Рассчитать
+              </button>
+            </div>
+          </form>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="divider divider-bottom"></div>
+  </section>
+</div>
+<!--Section #2 (Partners)-->
+<section class="pt-3 pb-0 pt-lg-0">
+  <div class="container">
+    <div class="row text-center justify-content-center align-items-center">
+      <div class="col-6 col-sm-4 col-lg-2 my-4">
+        <img src="assets/img/partners/partner-1.png"
+             srcset="assets/img/partners/partner-1@2x.png 2x"
+             alt="Альфа страхование логотип">
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2 my-4">
+        <img src="assets/img/partners/partner-2.png"
+             srcset="assets/img/partners/partner-2@2x.png 2x"
+             alt="Tinkoff.ru логотип">
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2 my-4">
+        <img src="assets/img/partners/partner-3.png"
+             srcset="assets/img/partners/partner-3@2x.png 2x"
+             alt="Росгосстрах логотип">
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2 my-4">
+        <img src="assets/img/partners/partner-4.png"
+             srcset="assets/img/partners/partner-4@2x.png 2x"
+             alt="Zetta логотип">
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2 my-4">
+        <img src="assets/img/partners/partner-5.png"
+             srcset="assets/img/partners/partner-5@2x.png 2x"
+             alt="Ренессанс страхование логотип">
+      </div>
+      <div class="col-6 col-sm-4 col-lg-2 my-4">
+        <img src="assets/img/partners/partner-6.png"
+             srcset="assets/img/partners/partner-6@2x.png 2x"
+             alt="Согласие страхование логотип">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Section #3 (Services)-->
+<section class="bg-light pt-0">
+  <div class="divider divider-top transform-flip-x mb-5"></div>
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-auto d-flex flex-column text-center">
+        <h3 class="section-title">Почему выбирают наш сервис</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-lg-3 my-3">
+        <div class="card card-body h-100 text-center shadow hover-box-shadow">
+          <img src="assets/img/services/service-1.svg" class="mb-4" alt="Сервис 1">
+          <h5 class="mb-3">Быстро</h5>
+          <p class="text-muted m-0">Введите данные всего один раз и используйте их при следующих покупках</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 my-3">
+        <div class="card card-body h-100 text-center shadow hover-box-shadow">
+          <img src="assets/img/services/service-2.svg" class="mb-4" alt="Сервис 2">
+          <h5 class="mb-3">Удобно</h5>
+          <p class="text-muted m-0">Не нужно идти в офис страховой компании, получите полис на email</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 my-3">
+        <div class="card card-body h-100 text-center shadow hover-box-shadow">
+          <img src="assets/img/services/service-3.svg" class="mb-4" alt="Сервис 3">
+          <h5 class="mb-3">Выгодно</h5>
+          <p class="text-muted m-0">Сэкономьте от 1 498 до 3 980 руб., так как базовая ставка может отличаться на
+            20%</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 my-3">
+        <div class="card card-body h-100 text-center shadow hover-box-shadow">
+          <img src="assets/img/services/service-4.svg" class="mb-4" alt="Сервис 4">
+          <h5 class="mb-3">Надежно</h5>
+          <p class="text-muted m-0">Вы получаете оригинальный полис. Любая подделка исключена.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer-->
+@@include('includes/footer.html')
+
+
+<!-- Scripts -->
+@@include('includes/scripts.html')
+
+</body>
+
+</html>

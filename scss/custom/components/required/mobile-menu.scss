@@ -1,0 +1,73 @@
+//
+// mobile-menu.scss
+//
+
+
+.mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  background: $white;
+  box-shadow: none;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  padding: 1em 1em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
+  @include media-breakpoint-up(xl) {
+    display: none;
+  }
+
+  .is-mobile-menu-visible & {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  &__inner {
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    width: 96%;
+    max-height: 90vh;
+    opacity: 1;
+    visibility: visible;
+    overflow: auto;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+
+      li {
+        a {
+          font-size: $spacer*1.5;
+          color: $body-color;
+          display: inline-block;
+          padding-top: $spacer;
+          padding-bottom: $spacer;
+          font-weight: 500;
+        }
+
+        &.active, &:hover {
+          & > a {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

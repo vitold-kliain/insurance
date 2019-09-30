@@ -1,0 +1,62 @@
+{
+  "author": "Foxlike",
+  "private": true,
+  "name": "insurance",
+  "version": "0.0.1",
+  "description": "insurance",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "./node_modules/.bin/gulp"
+  },
+  "browserslist": "Safari > 10, Firefox > 40, Chrome > 40, ie >= 11",
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "env": {
+      "es6": true,
+      "browser": true,
+      "jquery": true
+    }
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "dependencies": {
+    "@tanem/svg-injector": "~8.0.25",
+    "aos": "~2.3.4",
+    "bootstrap": "~4.3.1",
+    "bs-stepper": "^1.7.0",
+    "core-js": "^3.2.0",
+    "flatpickr": "^4.6.3",
+    "jarallax": "~1.11.0",
+    "jquery": "~3.4.1",
+    "popper.js": "~1.15.0",
+    "scrollmonitor": "~1.2.4",
+    "smooth-scroll": "~16.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "~7.4.4",
+    "@babel/preset-env": "~7.4.4",
+    "babel-plugin-transform-es2015-modules-strip": "~0.1.1",
+    "babel-plugin-transform-strict-mode": "~6.24.1",
+    "browser-sync": "~2.26.7",
+    "del": "~5.0.0",
+    "eslint": "~6.1.0",
+    "eslint-config-airbnb-base": "~13.2.0",
+    "eslint-plugin-import": "~2.18.0",
+    "gulp": "~4.0.2",
+    "gulp-autoprefixer": "~6.1.0",
+    "gulp-file-include": "^2.1.0",
+    "gulp-clean-css": "~4.2.0",
+    "gulp-eslint": "~6.0.0",
+    "gulp-newer": "~1.4.0",
+    "gulp-rename": "~1.4.0",
+    "gulp-sass": "~4.0.2",
+    "gulp-sourcemaps": "~2.6.1",
+    "node-sass-css-importer": "~0.0.3",
+    "rollup": "~1.17.0",
+    "rollup-plugin-babel": "~4.3.2",
+    "rollup-plugin-commonjs": "~10.0.0",
+    "rollup-plugin-node-resolve": "~5.2.0",
+    "rollup-plugin-uglify": "~6.0.1",
+    "yamljs": "~0.3.0"
+  }
+}

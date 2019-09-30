@@ -1,0 +1,15 @@
+scripts:
+    external:
+        - aos
+        - jquery
+        - jarallax
+        - scrollmonitor
+#        - smooth-scroll
+        - '@tanem/svg-injector'
+    globals:
+        aos: AOS
+        jarallax: jarallax
+        jquery: jQuery
+        scrollmonitor: scrollMonitor
+#        smooth-scroll: SmoothScroll
+        '@tanem/svg-injector': SVGInjector

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ОСАГО онлайн | Шаг 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Осаго - страховая компания">
+  <link href="assets/css/theme.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div id="my-page">
+  <div id="my-header">
+    <div class="bg-white text-white min-h-130" data-overlay>
+      <img src="assets/img/navbar/navbar-1.png"
+           srcset="assets/img/navbar/navbar-1@2x.png 2x"
+           alt="Background"
+           class="bg-image">
+
+      <!--Navbar Menu-->
+      @@include('includes/navbar.html')
+    </div>
+
+
+    <!--Mobile Menu-->
+    @@include('includes/mobile-menu.html')
+  </div>
+
+  <div id="my-content">
+    <section class="pt-0 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="card card-body border-radius-10 mt-n5 shadow px-3 px-sm-5">
+              <h4 class="m-0 pt-3 weight-500">Калькулятор ОСАГО</h4>
+              <div class="row py-5">
+                <div class="col-lg-7 col-xl-5">
+                  <div class="bs-stepper">
+                    <div class="bs-stepper-header" role="tablist">
+                      <div class="step active">
+                        <button type="button" class="step-trigger" role="tab">
+                          <span class="bs-stepper-circle">1</span>
+                          <span class="bs-stepper-label">Автомобиль</span>
+                        </button>
+                      </div>
+                      <div class="line"></div>
+                      <div class="step">
+                        <button type="button" class="step-trigger" role="tab">
+                          <span class="bs-stepper-circle">2</span>
+                          <span class="bs-stepper-label">Период и регион</span>
+                        </button>
+                      </div>
+                      <div class="line"></div>
+                      <div class="step">
+                        <button type="button" class="step-trigger" role="tab">
+                          <span class="bs-stepper-circle">3</span>
+                          <span class="bs-stepper-label">Водитель</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h6 class="weight-500 pb-2">Полученные данные</h6>
+              <form name="step-1-form" action="step-2.html" method="get">
+                <div class="form-row my-0 my-md-2">
+                  <div class="col-md-4 col-lg-3 my-2 my-md-0 mr-0 mr-lg-2">
+                    <div class="form-group">
+                      <label class="text-muted mb-2 text-small" for="car-brand">Марка автомобиля</label>
+                      <input type="text" name="car-name"
+                             class="form-control"
+                             id="car-brand"
+                             placeholder="Укажите марку"
+                             required>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-3 my-2 my-md-0 mr-0 mr-lg-2">
+                    <div class="form-group">
+                      <label class="text-muted mb-2 text-small" for="car-model">Модель автомобиля</label>
+                      <div class="position-relative">
+                        <select name="select-car-model"
+                                class="custom-select"
+                                id="car-model"
+                                required>
+                          <option selected disabled value="">Выберите модель</option>
+                          <option value="Model 1">Модель 1</option>
+                          <option value="Model 2">Модель 2</option>
+                          <option value="Model 3">Модель 3</option>
+                          <option value="Model 4">Модель 4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-3 my-2 my-md-0">
+                    <div class="form-group">
+                      <label class="text-muted mb-2 text-small" for="car-year">Год выпуска</label>
+                      <div class="position-relative">
+                        <select name="select-car-year"
+                                class="custom-select"
+                                id="car-year"
+                                required>
+                          <option selected disabled value="">Выберите</option>
+                          <option value="Year 2006">2006</option>
+                          <option value="Year 2008">2008</option>
+                          <option value="Year 2010">2010</option>
+                          <option value="Year 2012">2012</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row my-0 my-md-2">
+                  <div class="col-md-4 col-lg-3 my-2 my-md-0 mr-0 mr-lg-2">
+                    <div class="form-group">
+                      <label class="text-muted mb-2 text-small" for="engine-volume">Обьем двигателя</label>
+                      <div class="position-relative">
+                        <select name="select-engine-volume"
+                                class="custom-select"
+                                id="engine-volume"
+                                required>
+                          <option selected disabled value="">Выберите</option>
+                          <option value="Volume 1">Обьем 1</option>
+                          <option value="Volume 2">Обьем 2</option>
+                          <option value="Volume 3">Обьем 3</option>
+                          <option value="Volume 4">Обьем 4</option>
+                          <option value="Volume 5">Обьем 5</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-3 my-2 my-md-0 mr-0 mr-lg-2">
+                    <div class="form-group">
+                      <label class="text-muted mb-2 text-small" for="engine-power">Мощность двигателя</label>
+                      <div class="position-relative">
+                        <select name="select-engine-power"
+                                class="custom-select"
+                                id="engine-power"
+                                required>
+                          <option selected disabled value="">Выберите мощность</option>
+                          <option value="Power 1">Мощность 1</option>
+                          <option value="Power 2">Мощность 2</option>
+                          <option value="Power 3">Мощность 3</option>
+                          <option value="Power 4">Мощность 4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-3 my-2 my-md-0">
+                    <div class="form-group">
+                      <label class="text-muted mb-2 text-small" for="car-body">Кузов автомобиля</label>
+                      <div class="position-relative">
+                        <select name="select-car-body"
+                                class="custom-select"
+                                id="car-body"
+                                required>
+                          <option selected disabled value="">Выберите</option>
+                          <option value="Body 1">Кузов 1</option>
+                          <option value="Body 2">Кузов 2</option>
+                          <option value="Body 3">Кузов 3</option>
+                          <option value="Body 4">Кузов 4</option>
+                          <option value="Body 5">Кузов 5</option>
+                          <option value="Body 6">Кузов 6</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row my-0 my-md-2">
+                  <div class="col-md-4 col-lg-3 my-2 my-md-0">
+                    <div class="form-group">
+                      <label class="text-muted mb-2 text-small" for="transmission">Коробка передач</label>
+                      <div class="position-relative">
+                        <select name="select-transmission"
+                                class="custom-select"
+                                id="transmission"
+                                required>
+                          <option selected disabled value="">Выберите</option>
+                          <option value="Transmission 1">Коробка передач 1</option>
+                          <option value="Transmission 2">Коробка передач 2</option>
+                          <option value="Transmission 3">Коробка передач 3</option>
+                          <option value="Transmission 4">Коробка передач 4</option>
+                          <option value="Transmission 5">Коробка передач 5</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row my-3">
+                  <div class="col-md-6 col-lg-4 col-xl-3 my-2 my-md-0">
+                    <a href="index.html" class="btn btn-lg btn-white text-success-2 opacity-70 w-100 ">Назад</a>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-3 my-2 my-md-0">
+                    <button type="submit" class="btn btn-lg bg-gradient w-100">Продолжить</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- Footer-->
+@@include('includes/footer.html')
+
+
+<!-- Scripts -->
+@@include('includes/scripts.html')
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+//
+// components.scss
+//
+
+
+// Required Components
+@import "components/required/base.scss";
+@import "components/required/buttons.scss";
+@import "components/required/cards.scss";
+@import "components/required/colors.scss";
+@import "components/required/forms.scss";
+@import "components/required/icons.scss";
+@import "components/required/mobile-menu.scss";
+@import "components/required/navbar.scss";
+@import "components/required/sections.scss";
+@import "components/required/svg.scss";
+@import "components/required/typography.scss";
+@import "components/required/utilities.scss";
+
+
+// Optional Components
+@import "CSS:components/plugins/aos";
+@import "components/optional/dividers";
+@import "components/optional/flatpickr";
+@import "CSS:components/plugins/jarallax";
+@import "components/optional/stepper";

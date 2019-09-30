@@ -1,0 +1,61 @@
+//
+// forms.scss
+//
+
+
+.custom-control {
+  label, input {
+    cursor: pointer;
+  }
+
+  label {
+    user-select: none;
+    a {
+      color: $success-2;
+    }
+  }
+
+  &.text-small {
+    label {
+      &:before, &:after {
+        top: 0;
+      }
+    }
+  }
+}
+
+.form-group {
+  position: relative;
+
+  .custom-select {
+    + .icon {
+      position: absolute;
+      transform: translateY(-50%);
+      right: $spacer*.75;
+      top: $spacer*1.3;
+      pointer-events: none;
+    }
+  }
+}
+
+.custom-select {
+  cursor: pointer;
+}
+
+select {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI1IiB2aWV3Qm94PSIwIDAgOSA1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMCAwTDQuNSA1TDkgMEgwWiIgZmlsbD0iIzFCQUY5NyIvPgo8L3N2Zz4K") !important;
+  background-size: 10px !important;
+  background-position: calc(100% - 5%) !important;
+  background-repeat: no-repeat !important;
+  &:required {
+    &:invalid {
+      color: $gray-400;
+    }
+  }
+  option {
+    color: $body-color;
+    &[value=""][disabled] {
+      display: none;
+    }
+  }
+}

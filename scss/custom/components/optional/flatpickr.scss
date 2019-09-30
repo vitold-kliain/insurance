@@ -1,0 +1,81 @@
+//
+// flickity.scss
+//
+
+
+@import "CSS:../plugins/flatpickr.min";
+
+.flatpickr {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC4zIj4KPHJlY3QgeD0iMSIgeT0iMyIgd2lkdGg9IjE0IiBoZWlnaHQ9IjQiIGZpbGw9IiMxQkFGOTciLz4KPC9nPgo8cmVjdCB4PSIzIiB3aWR0aD0iMiIgaGVpZ2h0PSI0IiBmaWxsPSIjMUJBRjk3Ii8+CjxyZWN0IHg9IjExIiB3aWR0aD0iMiIgaGVpZ2h0PSI0IiBmaWxsPSIjMUJBRjk3Ii8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTQgMkgyQzAuOSAyIDAgMi45IDAgNFYxNkMwIDE3LjEgMC45IDE4IDIgMThIMTRDMTUuMSAxOCAxNiAxNy4xIDE2IDE2VjRDMTYgMi45IDE1LjEgMiAxNCAyWk0xNCAxNkgyVjhIMTRWMTZaTTIgNkgxNFY0SDJWNloiIGZpbGw9IiMxQkFGOTciLz4KPC9zdmc+Cg==") !important;
+  background-position: calc(100% - 5%) !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+}
+
+.flatpickr-months {
+  margin: $spacer/2 0;
+
+  .flatpickr-month, .flatpickr-next-month, .flatpickr-prev-month {
+    height: auto;
+    position: relative;
+
+    &:hover {
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+
+  .flatpickr-month {
+    color: $body-color;
+  }
+}
+
+.flatpickr-day {
+  border-radius: $border-radius;
+  color: $body-color;
+
+  &.today {
+    border-color: $success-2;
+
+    &:hover {
+      background: $success-2;
+      border-color: $success-2;
+    }
+  }
+
+  &:hover {
+    background: rgba($success-2, .1);
+    border-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay {
+  background: $success-2;
+  border-color: $success-2;
+}
+
+.flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
+  box-shadow: -10px 0 0 $success-2;
+}
+
+.flatpickr-day.selected.startRange, .flatpickr-day.startRange.startRange, .flatpickr-day.endRange.startRange {
+  border-radius: $border-radius 0 0 $border-radius;
+}
+
+.flatpickr-day.selected.endRange, .flatpickr-day.startRange.endRange, .flatpickr-day.endRange.endRange {
+  border-radius: 0 $border-radius $border-radius 0;
+}
+
+input.flatpickr-input {
+  + input[readonly] {
+    background-color: $input-bg;
+    cursor: pointer;
+  }
+}
+
+.flatpickr-months {
+  select, input {
+    -webkit-appearance: none !important;
+  }
+}

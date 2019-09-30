@@ -1,0 +1,48 @@
+//
+// icons.scss
+//
+
+
+.icon {
+  flex-shrink: 0;
+  width: auto;
+  height: $spacer*2;
+
+  &.icon-xs {
+    height: $spacer;
+
+    path {
+      &[stroke] {
+        stroke-width: 3px;
+      }
+    }
+  }
+
+  &.icon-sm {
+    height: $spacer*1.5;
+  }
+
+  &.icon-md {
+    height: $spacer*3.5;
+  }
+
+  &.icon-lg {
+    height: $spacer*4.5;
+  }
+
+  &.icon-xl {
+    height: $spacer*6;
+  }
+
+  &.icon-rounded {
+    border-radius: $rounded-pill;
+    padding: $spacer/2;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: $spacer*3;
+  }
+}
+
+
+

@@ -1,0 +1,68 @@
+//
+// base.scss
+//
+
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+* {
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  color: $body-color;
+  background-color: $white;
+  overflow-x: hidden;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  background: transparent;
+  text-decoration: none;
+  transition: $transition-base;
+  cursor: pointer;
+  color: $primary;
+
+  &:hover {
+    color: darken($primary, 10%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  letter-spacing: .3px;
+}
+
+p {
+  letter-spacing: .3px;
+}
+
+img {
+  max-width: 100%;
+}

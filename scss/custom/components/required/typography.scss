@@ -1,0 +1,99 @@
+//
+// typography.scss
+//
+
+
+.text-small {
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+p {
+  letter-spacing: .3px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $primary;
+
+  &:hover {
+    color: darken($primary, 10%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.text-white {
+  .display-1,
+  .display-2,
+  .display-3,
+  .display-4,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6
+  {
+    color: $white;
+  }
+
+  a {
+    transition: $transition-base;
+  }
+
+  .text-muted {
+    color: rgba($white, .5) !important;
+  }
+}
+
+p.lead {
+  line-height: 1.5rem;
+}
+
+@include media-breakpoint-up(md) {
+  .display-1,
+  .display-2,
+  .display-3,
+  .display-4,
+  h1,
+  .h1 {
+    margin-bottom: 1.5rem;
+  }
+  h1, .h1 {
+    line-height: 1.125;
+  }
+  p.lead {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .lead {
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+  }
+}

@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ОСАГО онлайн | Шаг 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Осаго - страховая компания">
+  <link href="assets/css/theme.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div id="my-page">
+  <div id="my-header">
+    <div class="bg-white text-white min-h-130" data-overlay>
+      <img src="assets/img/navbar/navbar-1.png"
+           srcset="assets/img/navbar/navbar-1@2x.png 2x"
+           alt="Background"
+           class="bg-image">
+
+      <!--Navbar Menu-->
+      @@include('includes/navbar.html')
+    </div>
+
+
+    <!--Mobile Menu-->
+    @@include('includes/mobile-menu.html')
+  </div>
+
+  <div id="my-content">
+    <section class="pt-0 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="card card-body border-radius-10 mt-n5 shadow px-3 px-sm-5">
+              <h4 class="m-0 pt-3 weight-500">Калькулятор ОСАГО</h4>
+              <div class="row py-5">
+                <div class="col-lg-7 col-xl-5">
+                  <div class="bs-stepper">
+                    <div class="bs-stepper-header" role="tablist">
+                      <div class="step">
+                        <button type="button" class="step-trigger" role="tab">
+                          <span class="bs-stepper-circle"><i class="fas fa-check"></i></span>
+                          <span class="bs-stepper-label">Автомобиль</span>
+                        </button>
+                      </div>
+                      <div class="line"></div>
+                      <div class="step">
+                        <button type="button" class="step-trigger" role="tab">
+                          <span class="bs-stepper-circle"><i class="fas fa-check"></i></span>
+                          <span class="bs-stepper-label">Период и регион</span>
+                        </button>
+                      </div>
+                      <div class="line"></div>
+                      <div class="step active">
+                        <button type="button" class="step-trigger" role="tab">
+                          <span class="bs-stepper-circle">3</span>
+                          <span class="bs-stepper-label">Водитель</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-9">
+                  <form name="step-3-driver-1" method="get" action="">
+                    <h6 class="weight-500 pb-2">1 водитель</h6>
+                    <div class="form-row my-0 my-md-2">
+                      <div class="col-md-6 col-xl my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="surname-driver-1">Фамилия</label>
+                          <input type="text" name="surname-driver-1"
+                                 class="form-control"
+                                 id="surname-driver-1"
+                                 placeholder="Введите фамилию"
+                                 required>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="name-driver-1">Имя</label>
+                          <input type="text" name="name-driver-1"
+                                 class="form-control"
+                                 id="name-driver-1"
+                                 placeholder="Введите имя"
+                                 required>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="name-driver-1">Отечетсво</label>
+                          <input type="text" name="fatherName-driver-1"
+                                 class="form-control"
+                                 id="fatherName-driver-1"
+                                 placeholder="Введите отечество"
+                                 required>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="birthday-driver-1">Дата рождения</label>
+                          <input type="text"
+                                 id="birthday-driver-1"
+                                 class="form-control flatpickr"
+                                 data-flatpickr="data-flatpickr"
+                                 data-date-format="d-m-Y"
+                                 required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row my-0 my-md-2">
+                      <div class="col-md-6 col-xl-3 my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="license-driver-1">Серия ВУ</label>
+                          <input type="text" name="license-driver-1"
+                                 class="form-control"
+                                 id="license-driver-1"
+                                 placeholder="Введите серию"
+                                 required>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-3 my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="number-driver-1">Номер ВУ</label>
+                          <input type="text" name="number-driver-1"
+                                 class="form-control"
+                                 id="number-driver-1"
+                                 placeholder="Введите номер"
+                                 required>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-3 my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="date-first-license-driver-1">Дата выдачи
+                            первого ВУ</label>
+                          <input type="text"
+                                 id="date-first-license-driver-1"
+                                 class="form-control flatpickr"
+                                 data-flatpickr="data-flatpickr"
+                                 data-date-format="d-m-Y"
+                                 required>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <h6 class="weight-500 pb-2">2 водитель</h6>
+                    <div class="form-row my-0 my-md-2">
+                      <div class="col-md-6 col-xl my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="surname-driver-2">Фамилия</label>
+                          <input type="text" name="surname-driver-2"
+                                 class="form-control"
+                                 id="surname-driver-2"
+                                 placeholder="Введите фамилию"
+                                 required>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="name-driver-2">Имя</label>
+                          <input type="text" name="name-driver-2"
+                                 class="form-control"
+                                 id="name-driver-2"
+                                 placeholder="Введите имя"
+                                 required>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="name-driver-2">Отечетсво</label>
+                          <input type="text" name="fatherName-driver-2"
+                                 class="form-control"
+                                 id="fatherName-driver-2"
+                                 placeholder="Введите отечество"
+                                 required>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="birthday-driver-2">Дата рождения</label>
+                          <input type="text"
+                                 id="birthday-driver-2"
+                                 class="form-control flatpickr"
+                                 data-flatpickr="data-flatpickr"
+                                 data-date-format="d-m-Y"
+                                 required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row my-0 my-md-2">
+                      <div class="col-md-6 col-xl-3 my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="license-driver-2">Серия ВУ</label>
+                          <input type="text" name="license-driver-2"
+                                 class="form-control"
+                                 id="license-driver-2"
+                                 placeholder="Введите серию"
+                                 required>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-3 my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="number-driver-2">Номер ВУ</label>
+                          <input type="text" name="number-driver-2"
+                                 class="form-control"
+                                 id="number-driver-2"
+                                 placeholder="Введите номер"
+                                 required>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl-3 my-2 my-md-0">
+                        <div class="form-group">
+                          <label class="text-muted mb-2 text-small" for="date-first-license-driver-2">Дата выдачи
+                            первого ВУ</label>
+                          <input type="text"
+                                 id="date-first-license-driver-2"
+                                 class="form-control flatpickr"
+                                 data-flatpickr="data-flatpickr"
+                                 data-date-format="d-m-Y"
+                                 required>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="custom-control custom-checkbox my-4">
+                      <input type="checkbox" class="custom-control-input" id="planner-agree" required>
+                      <label class="custom-control-label" for="planner-agree">Согласен с <a target="_blank"
+                                                                                            href="javascript:;">правилами
+                        предоставления информации</a>
+                      </label>
+                    </div>
+                    <div class="form-row my-4">
+                      <div class="col-md-6 col-lg-4 col-xl-4 my-2 my-md-0">
+                        <a href="step-1.html" class="btn btn-lg btn-white text-success-2 opacity-70 w-100 ">Назад</a>
+                      </div>
+                      <div class="col-md-6 col-lg-4 col-xl-4 my-2 my-md-0">
+                        <button type="submit" class="btn btn-lg bg-gradient w-100">Продолжить</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- Footer-->
+@@include('includes/footer.html')
+
+
+<!-- Scripts -->
+@@include('includes/scripts.html')
+
+</body>
+
+</html>

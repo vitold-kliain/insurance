@@ -1,0 +1,189 @@
+//
+// utilities.scss
+//
+
+
+// Overflow
+.o-hidden {
+  overflow: hidden;
+}
+
+// Background Images
+.bg-image {
+  &:not([class*='absolute']) {
+    position: absolute;
+  }
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+img.bg-image {
+  object-fit: cover;
+}
+
+// opacity-# element with value of 0 - 100
+@for $i from 1 through 9 {
+  $opacity: ($i / 10);
+  .opacity-#{($i*10)} {
+    opacity: $opacity;
+  }
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+// Transforms
+.transform-flip-x {
+  transform: scaleY(-1);
+}
+
+.transform-flip-y {
+  transform: scaleX(-1);
+}
+
+// height-# element with value of 0 - 90
+@for $i from 1 through 9 {
+  $height: ($i * 10);
+  .min-vh-#{$height} {
+    min-height: #{$height}vh;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  @for $i from 1 through 10 {
+    $height: ($i * 10);
+    .min-vh-md-#{$height} {
+      min-height: #{$height}vh;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  @for $i from 1 through 10 {
+    $height: ($i * 10);
+    .min-vh-lg-#{$height} {
+      min-height: #{$height}vh;
+    }
+  }
+}
+
+.h-0 {
+  height: 0;
+}
+
+.min-h-130 {
+  min-height: 130px;
+}
+
+// Height
+img {
+  &.h-100 {
+    object-fit: cover;
+  }
+}
+
+.img-fluid {
+  &.position-relative {
+    z-index: 1;
+  }
+}
+
+// Width
+@include media-breakpoint-up(lg) {
+  .w-lg-100 {
+    width: 100%;
+  }
+}
+
+// Hover Effects
+.hover-translate {
+  transition: $transition-base;
+  &:hover {
+    transform: translateY(-$spacer/3);
+  }
+}
+
+.hover-box-shadow {
+  transition: $transition-base;
+  &:hover {
+    transform: translateY(-$spacer/3);
+    box-shadow: $box-shadow-lg !important;
+  }
+}
+
+
+// Alignment
+.top {
+  top: 0;
+  bottom: auto;
+}
+
+.bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.left {
+  right: auto;
+  left: 0;
+}
+
+.right {
+  left: auto;
+  right: 0;
+}
+
+.dotted-line {
+  position: absolute;
+  margin-top: -7rem;
+}
+
+// Borders
+.border-thick {
+  border-width: $border-width*2 !important;
+}
+
+.rounded-md {
+  border-radius: $spacer*2.7;
+}
+
+.rounded-lg {
+  border-radius: 200rem !important;
+}
+
+// Reset list
+.reset-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+// Fonts weight
+.weight-300 {
+  font-weight: 300;
+}
+
+.weight-400 {
+  font-weight: 400;
+}
+
+.weight-500 {
+  font-weight: 500;
+}
+
+.weight-600 {
+  font-weight: 600;
+}
+
+.weight-700 {
+  font-weight: 700;
+}
+
+.weight-800 {
+  font-weight: 700;
+}

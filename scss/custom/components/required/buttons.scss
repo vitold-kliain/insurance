@@ -1,0 +1,37 @@
+//
+// buttons.scss
+//
+
+.btn, button {
+  border: 0;
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    border-color: rgba($value, .25);
+
+    &:hover {
+      background-color: rgba($value, .2);
+      border-color: rgba(0, 0, 0, 0);
+      color: $value;
+    }
+  }
+}
+
+.btn {
+  color: $white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06);
+  text-transform: uppercase;
+  transition: $transition-base;
+  font-size: $font-size-sm;
+
+  &:hover {
+    color: rgba($white, .65)
+  }
+
+  &.btn-lg {
+    @include media-breakpoint-down(sm) {
+      @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+    }
+  }
+}

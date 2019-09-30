@@ -1,0 +1,17 @@
+// 
+// colors.scss
+//
+
+$success-lighten: #E8F7F4;
+
+
+.bg-gradient {
+  background: linear-gradient(0deg, $teal 0%, $green 100%);
+}
+
+@each $color,
+$value in $theme-colors {
+  .bg-#{$color}-alt {
+    background-color: rgba($value, .1);
+  }
+}
